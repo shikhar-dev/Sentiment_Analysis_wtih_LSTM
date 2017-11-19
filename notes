@@ -1,0 +1,11 @@
+Embedded Layer is used to convert integers assigned to numbers by Tokenizer. to vectors.
+How integer is assigned --
+First the word with most occurence is assigned 0. and all its occurences are assigned 0.Next word is assigned the value of 1 (all its occurences).
+this way words are mapped to integers.
+Every word is mapped to unique INteger.
+if we want top 500 then vocab size will be 500 (and numbers from 0 to 499 will come).
+ENMBEDDED(input_dim(vocab size),output_dim(lenght of vector),input_length(number of words))
+Something about LSTM that i learned today.
+input_shape = (number of examples,timesteps,input_dim) here input_dimension is the number of input feature to LSTM ar ONE TIMESTEP.
+LSTM(output_dim/hidden_units,input_shape) outputs (batch_size,timestep,output_dim) if return_seq is set to True otherwise it outputs (batch_size,output_dim)
+output_dim is the number of hidden units.
